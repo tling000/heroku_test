@@ -1,11 +1,7 @@
-# -*- coding: utf-8 -*-
-from flask import Flask
+import datetime as dt
+import pandas as pd
 
-app = Flask(__name__)
-
-@app.route('/')
-def index():
-    return 'hello, HEROKU'
-
-if __name__ == '__main__':
-    app.run()
+def test():
+    print('hello world!!')
+    print(dt.datetime.utcnow().strftime('%Y/%m/%d %H:%M'))
+    print(pd.DataFrame(columns=['A', 'B', 'C'], index=[i for i in range(2)]))
